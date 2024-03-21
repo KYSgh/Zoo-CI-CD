@@ -72,23 +72,16 @@ jobs:
         
       - name: Make zip file
         run: |
-          ls
+          ls -al
           mkdir deploy
           cp ./appspec.yml ./deploy/
           cp ./Dockerfile ./deploy/
           cp ./scripts/deploy.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           cp ./reactDockerfile ./deploy/
-          cp -r ./my-zootopic-front-main ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
       
-      - name: Make zip file2
-        run: |
-          ls
-          mkdir reacts
-          cp ./reactDockerfile ./reacts/
-          cp -r ./my-zootopic-front-main ./reacts/
-          zip -r -qq ./reacts-build.zip ./reacts
+
         
 
 
@@ -119,9 +112,6 @@ jobs:
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name RealLastZinMakFinal123 \
             --s3-location bucket=tcat-spring,bundleType=zip,key=spring-build.zip
-          aws deploy create-deployment --application-name RealLastZinMakFinal \
-            --deployment-config-name CodeDeployDefault.OneAtATime \
-            --deployment-group-name RealLastZinMakFinal456 \
-            --s3-location bucket=tcat-spring,bundleType=zip,key=reacts-build.zip \
+
       
      
