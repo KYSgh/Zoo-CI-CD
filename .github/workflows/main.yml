@@ -33,7 +33,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle- 
 
+      - name: nodejs download
+        run: sudo yum install nodejs npm
+        shell: bash
 
+
+      - name: react download
+        run: sudo npm install react
+        shell: bash
+
+      - name: react start
+        run: |
+          npx create-react-app my-zooTopic-front-main
+          cd my-zooTopic-front-main
+          npm start
+        shell: bash
       
       
  
