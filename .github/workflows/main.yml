@@ -33,6 +33,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle- 
 
+            
+
       - name: Install Node.js and npm
         run: |
           sudo apt update
@@ -41,8 +43,8 @@ jobs:
       
       - name: Create and start a new React app
         run: |
-          npx create-react-app my-zooTopic-front-main
-          cd my-zooTopic-front-main
+          npx create-react-app my-zootopic-front-main
+          cd my-zootopic-front-main
           npm start
         shell: bash
 
