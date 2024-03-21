@@ -12,14 +12,6 @@ else
   sleep 5
 fi
 
-cd /home/ec2-user/
-mkdir -p webb
-mv ./app/my-zootopic-front-main /home/ec2-user/webb
-mv ./app/reactDockerfile /home/ec2-user/webb
-cd /home/ec2-user/webb
-sudo docker build -t reacts-webb .
-sudo docker run -d -p 3000:3000 reacts-webb
-
 cd /home/ec2-user/app
 sudo docker build -t zoomy-spring-app .
 sudo docker run -d -p 8080:8080 zoomy-spring-app
