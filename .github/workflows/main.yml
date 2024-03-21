@@ -45,6 +45,7 @@ jobs:
         run: |
           npx create-react-app my-zootopic-front-main
           ls
+          sudo chmod +x ./my-zootopic-front-main
         shell: bash
 
 
