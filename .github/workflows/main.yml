@@ -121,6 +121,9 @@ jobs:
           aws deploy create-deployment --application-name RealLastZinMakFinal \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name RealLastZinMakFinal456 \
-            --s3-location bucket=tcat-spring,bundleType=zip,key=reacts-build.zip
+            --s3-location bucket=tcat-spring,bundleType=zip,key=reacts-build.zip \
+            --file-exists-behavior OVERWRITE --file-type YAML \
+            --file webappspec.yml
+
       
      
