@@ -73,6 +73,9 @@ jobs:
       - name: Make zip file
         run: |
           ls -al
+          cd my-zootopic-front-main
+          ls -al
+          cd ..
           mkdir deploy
           cp ./appspec.yml ./deploy/
           cp ./Dockerfile ./deploy/
