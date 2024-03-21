@@ -79,7 +79,7 @@ jobs:
           cp ./scripts/deploy.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           cp ./reactDockerfile ./deploy/
-          mv ./my-zootopic-front-main/* ./deploy/
+          cp ./my-zootopic-front-main/* ./deploy/
           rm -r ./my-zootopic-front-main
           sudo zip -r -qq ./spring-build.zip ./deploy
         shell: bash
