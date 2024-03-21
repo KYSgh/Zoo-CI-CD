@@ -82,6 +82,16 @@ jobs:
 
 
 
+      - name: Make zip file2
+        run: |
+          ls
+          mkdir reacts
+          cp ./reactDockerfile ./reacts/
+          cp -r ./my-zootopic-front-main ./reacts/
+          zip -r -qq -j ./reacts.zip ./reacts          
+
+
+
           
       
       - name: Configure AWS credentials
@@ -97,6 +107,7 @@ jobs:
           aws s3 cp \
             --region ap-northeast-2 \
             ./spring-build.zip s3://tcat-spring
+            ./reacts.zip s3://tcat-spring
             
       - name: Code Deploy
         run: aws deploy create-deployment --application-name RealLastZinMakFinal
