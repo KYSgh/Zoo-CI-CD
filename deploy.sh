@@ -13,5 +13,5 @@ else
 fi
 
 cd /home/ec2-user/app
-sudo docker build -t Zoomy-spring-app .
-sudo docker run -d -p 8080:8080 Zoomy-spring-app
+sudo docker build -t tcat-api-aaa-Zoomy-spring-app .
+sudo docker run -d -p 8080:8080 tcat-api-aaa-Zoomy-spring-app
