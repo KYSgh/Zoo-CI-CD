@@ -77,6 +77,8 @@ jobs:
           cp ./Dockerfile ./deploy/
           cp ./scripts/deploy.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
+          cp ./reactDockerfile ./deploy/
+          cp -r ./my-zootopic-front-main ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
       
       - name: Make zip file2
