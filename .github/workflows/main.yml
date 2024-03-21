@@ -83,8 +83,9 @@ jobs:
         run: |
           ls
           mkdir reacts
-          cp ./scripts/webdeploy.sh ./reacts/
+          cp ./webappspec.yml ./reacts/
           cp ./reactDockerfile ./reacts/
+          cp ./scripts/webdeploy.sh ./reacts/
           cp -r ./my-zootopic-front-main ./reacts/
           zip -r -qq ./reacts-build.zip ./reacts
         
