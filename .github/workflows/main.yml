@@ -33,6 +33,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle- 
 
+
+
+      - name: Install Node.js and npm
+        run: |
+          sudo apt update
+          sudo apt install nodejs npm
+        shell: bash
+      
+      - name: Create and start a new React app
+        run: |
+          npx create-react-app my-zootopic-front-main
+          ls
+        shell: bash
+
+
       
  
       - name: Make application.yml
