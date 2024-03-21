@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-demo.clw46aqcm7il.ap-northeast-2.rds.amazonaws.com:3306/userData?useSSL=false&serverTimezone=UTC
+    username: admin
+    password: zootopic
+  thymeleaf:
+    cache: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
