@@ -19,7 +19,7 @@ mv ./app/reactDockerfile /home/ec2-user/webb
 cd /home/ec2-user/webb/zootopic-front-main
 mv ./reactDockerfile ./Dockerfile
 sudo docker build -t reacts-webb .
-sudo docker run -d -p 3000:3000 reacts-webb
+sudo docker run -p 3000:3000 reacts-webb
 
 cd /home/ec2-user/app
 sudo docker build -t zoomy-spring-app .
