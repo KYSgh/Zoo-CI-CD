@@ -88,7 +88,7 @@ jobs:
           mkdir reacts
           cp ./reactDockerfile ./reacts/
           cp -r ./my-zootopic-front-main ./reacts/
-          zip -r -qq -j ./reacts.zip ./reacts          
+          zip -r -qq -j ./reacts-build.zip ./reacts          
 
 
 
