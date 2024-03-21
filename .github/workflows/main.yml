@@ -109,7 +109,7 @@ jobs:
             ./spring-build.zip s3://tcat-spring
           aws s3 cp \
             --region ap-northeast-2 \
-            ./reacts.zip s3://tcat-spring
+            ./reacts-build.zip s3://tcat-spring
 
             
       - name: Code Deploy
