@@ -78,16 +78,15 @@ jobs:
           cp ./scripts/*.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
-
-
-
+      
       - name: Make zip file2
         run: |
           ls
           mkdir reacts
           cp ./reactDockerfile ./reacts/
           cp -r ./my-zootopic-front-main ./reacts/
-          zip -r -qq -j ./reacts-build.zip ./reacts          
+          zip -r -qq -j ./reacts-build.zip ./reacts/*
+        
 
 
 
