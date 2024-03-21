@@ -33,20 +33,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle- 
 
-            
-
-      - name: Install Node.js and npm
-        run: |
-          sudo apt update
-          sudo apt install nodejs npm
-        shell: bash
-      
-      - name: Create and start a new React app
-        run: |
-          npx create-react-app my-zootopic-front-main
-        shell: bash
-
-      
       
  
       - name: Make application.yml
@@ -75,7 +61,6 @@ jobs:
           cp ./Dockerfile ./deploy/
           cp ./scripts/*.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
-          cp ./my-zootopic-front-main ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
 
 
