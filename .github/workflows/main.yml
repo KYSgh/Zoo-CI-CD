@@ -83,9 +83,7 @@ jobs:
         run: |
           ls
           mkdir reacts
-          cp ./appspec.yml ./reacts/
           cp ./reactDockerfile ./reacts/
-          cp ./scripts/*.sh ./deploy/
           cp -r ./my-zootopic-front-main ./reacts/
           zip -r -qq ./reacts-build.zip ./reacts
         
