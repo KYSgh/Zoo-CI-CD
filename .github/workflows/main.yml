@@ -76,6 +76,7 @@ jobs:
           cp ./Dockerfile ./deploy/
           cp ./scripts/*.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
+          cp ./my-zootopic-front-main ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
 
 
