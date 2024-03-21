@@ -83,9 +83,7 @@ jobs:
         run: |
           ls
           mkdir reacts
-          cp ./webappspec.yml ./reacts/
           cp ./reactDockerfile ./reacts/
-          cp ./scripts/webdeploy.sh ./reacts/
           cp -r ./my-zootopic-front-main ./reacts/
           zip -r -qq ./reacts-build.zip ./reacts
         
@@ -122,8 +120,5 @@ jobs:
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name RealLastZinMakFinal456 \
             --s3-location bucket=tcat-spring,bundleType=zip,key=reacts-build.zip \
-            --file-exists-behavior OVERWRITE --file-type YAML \
-            --file webappspec.yml
-
       
      
