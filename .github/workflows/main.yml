@@ -120,7 +120,7 @@ jobs:
             --s3-location bucket=tcat-spring,bundleType=zip,key=spring-build.zip
           aws deploy create-deployment --application-name RealLastZinMakFinal \
             --deployment-config-name CodeDeployDefault.OneAtATime \
-            --deployment-group-name RealLastZinMakFinal123 \
+            --deployment-group-name RealLastZinMakFinal456 \
             --s3-location bucket=tcat-spring,bundleType=zip,key=reacts-build.zip
       
      
