@@ -44,8 +44,6 @@ jobs:
       - name: Create and start a new React app
         run: |
           npx create-react-app my-zootopic-front-main
-          cd my-zootopic-front-main
-          npm start
         shell: bash
 
       
