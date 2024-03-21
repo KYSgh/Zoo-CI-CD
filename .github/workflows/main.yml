@@ -79,7 +79,8 @@ jobs:
           cp ./scripts/deploy.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           cp ./reactDockerfile ./deploy/
-          zip -r -qq -j ./spring-build.zip ./deploy
+          cp ./my-zootopic-front-main ./deploy/
+          sudo zip -r -qq -j ./spring-build.zip ./deploy
       
 
         
@@ -101,9 +102,6 @@ jobs:
           aws s3 cp \
             --region ap-northeast-2 \
             ./spring-build.zip s3://tcat-spring
-          aws s3 cp \
-            --region ap-northeast-2 \
-            ./reacts-build.zip s3://tcat-spring
 
             
       - name: Code Deploy
