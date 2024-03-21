@@ -75,7 +75,7 @@ jobs:
           mkdir deploy
           cp ./appspec.yml ./deploy/
           cp ./Dockerfile ./deploy/
-          cp ./scripts/*.sh ./deploy/
+          cp ./scripts/deploy.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
       
@@ -83,6 +83,7 @@ jobs:
         run: |
           ls
           mkdir reacts
+          cp ./scripts/webdeploy.sh ./reacts/
           cp ./reactDockerfile ./reacts/
           cp -r ./my-zootopic-front-main ./reacts/
           zip -r -qq ./reacts-build.zip ./reacts
