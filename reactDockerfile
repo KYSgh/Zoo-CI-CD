@@ -1,8 +1,8 @@
 # Node.js를 지원하는 이미지를 기반으로 함
-FROM node:latest
+FROM node:16
 
 # 작업 디렉토리를 지정합니다.
-WORKDIR /webbdok
+WORKDIR /webb/my-zootopic-front-main
 
 # 앱의 의존성을 설치합니다.
 RUN npm install
